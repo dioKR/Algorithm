@@ -55,7 +55,7 @@ second = data[n-2]
 
 # 가장 큰 값 더해지는 횟수 구하기
 count = int(m/(k+1)) * k
-count += m % (k+1)
+count += m % (k+1) # 홀수 일때
 
 result = 0
 result += first * count
