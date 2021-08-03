@@ -3,7 +3,7 @@ package DFS;
 import java.util.Scanner;
 
 // 이코테 DFS
-public class 음료수_얼려먹기 {
+public class TIC_DFS_3 {
 
     static int n;
     static int m;
