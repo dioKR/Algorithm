@@ -2,6 +2,7 @@ package DFS;
 
 import java.util.Scanner;
 
+// 이코테 DFS
 public class 음료수_얼려먹기 {
 
     static int n;
@@ -21,7 +22,6 @@ public class 음료수_얼려먹기 {
         }
         return false;
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
@@ -36,7 +36,7 @@ public class 음료수_얼려먹기 {
 
         for(int i=0;i<n;i++) {
             for(int j=0;j<m;j++) {
-                if(dfs(i,j) == true) {
+                if(dfs(i, j)) {
                     count += 1;
                 }
             }
