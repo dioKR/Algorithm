@@ -23,6 +23,9 @@ public class Ex4_1 {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         sc.nextLine(); // 버퍼 지우기
+
+        long start = System.currentTimeMillis();
+
         String str = sc.nextLine();
         for(int i=0; i<str.length(); i++) {
             switch(str.charAt(i)) {
@@ -41,6 +44,9 @@ public class Ex4_1 {
             }
         }
         System.out.println((x+1) + " " + (y+1));
+
+        long end = System.currentTimeMillis();
+        System.out.println("수행시간: " + (end-start) + " ms");
     }
 }
 
@@ -50,6 +56,8 @@ class Solution {
 
         int n = sc.nextInt();
         sc.nextLine();
+
+        long start = System.currentTimeMillis();
 
         String[] plans = sc.nextLine().split(" ");
         int x = 1, y = 1;
@@ -77,5 +85,9 @@ class Solution {
 
         }
         System.out.println(x + " " + y);
+
+        long end = System.currentTimeMillis();
+        System.out.println("수행시간 : " + (end - start) + " ms");
+
     }
 }
