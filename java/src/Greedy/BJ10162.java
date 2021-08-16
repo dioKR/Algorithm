@@ -9,13 +9,14 @@ import java.util.Scanner;
 public class BJ10162 {
     public static void main(String[] args) {
 
-        long start = System.currentTimeMillis();
+
 
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
 
         int a = 0; int b = 0; int c = 0;
 
+        long start = System.currentTimeMillis();
         if(t%10 != 0) {
             System.out.println(-1);
             System.exit(0);
@@ -33,12 +34,11 @@ public class BJ10162 {
                 t %= 10;
             }
         }
-
-        System.out.println(a + " " + b + " " + c);
-
         long end = System.currentTimeMillis();
 
         System.out.println("수행시간 : " + (end - start) + " ms");
+
+        System.out.println(a + " " + b + " " + c);
 
     }
 }
