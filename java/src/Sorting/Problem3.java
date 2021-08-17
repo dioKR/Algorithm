@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-class Student implements Comparable<Student>{
+class Student implements Comparable<Student> {
 
     private String name;
     private int score;
@@ -26,7 +26,7 @@ class Student implements Comparable<Student>{
 
     @Override
     public int compareTo(Student other) {
-        if(this.score < other.score) {
+        if (this.score < other.score) {
             return -1;
         }
         return 1;
@@ -40,7 +40,7 @@ public class Problem3 {
 
         int n = sc.nextInt();
         sc.nextLine();
-        for(int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             String str = sc.nextLine();
             String[] tmp = str.split(" ");
             students.add(new Student(tmp[0], Integer.parseInt(tmp[1])));
@@ -48,9 +48,28 @@ public class Problem3 {
 
         Collections.sort(students);
 
-        for(Student student : students) {
+        for (Student student : students) {
             System.out.print(student.getName() + " ");
         }
+    }
+}
 
+class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        List<Student> students = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            String name = sc.next();
+            int score = sc.nextInt();
+            students.add(new Student(name, score));
+        }
+        Collections.sort(students);
+
+        for(int i=0; i<students.size(); i++) {
+            System.out.print(students.get(i).getName() + "");
+        }
     }
 }
