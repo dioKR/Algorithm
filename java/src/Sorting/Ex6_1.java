@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 // 이코테
 // 선택정렬 소스코드
+// 선택정렬 : 가장 작은 것을 선택한다.
 // Selection sort
 public class Ex6_1 {
     static int[] arr = {7, 5, 9, 0, 3, 1, 6, 2, 4, 8};
