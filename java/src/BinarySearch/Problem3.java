@@ -20,11 +20,7 @@ public class Problem3 {
             dducks[i] = sc.nextInt();
         }
 
-        Arrays.sort(dducks);
-        System.out.println(Arrays.toString(dducks));
-
-        int result = binary_search(dducks, m, 0, dducks[n - 1]);
-        System.out.println(result);
+        System.out.println(binary_search(dducks, m, 0, dducks[n - 1]));
 
     }
 
