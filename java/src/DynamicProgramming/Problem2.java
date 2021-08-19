@@ -5,7 +5,7 @@ import java.util.Scanner;
 // 이코테
 // 1로 만들기
 // 바텀업 방식 - 상향식
-public class Problem4 {
+public class Problem2 {
 
     static int[] d = new int[30001];
 
