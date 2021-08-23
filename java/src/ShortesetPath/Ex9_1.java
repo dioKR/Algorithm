@@ -47,6 +47,11 @@ public class Ex9_1 {
     public static void dijkstra(int start) {
         d[start] = 0;
         visited[start] = true;
+
+        for (int j = 0; j < graph.get(start).size(); j++) {
+            d[graph.get(start).get(j).getIndex()] = graph.get(start).get(j).getDistance();
+        }
+
         for (int i = 0; i < n - 1; i++) {
             int now = getSmallestNode();
             visited[now] = true;
