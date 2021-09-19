@@ -15,7 +15,7 @@ public class BJ1110 {
 
             n = ((n % 10) * 10) + (((n / 10) + (n % 10)) % 10);
             cnt++;
-            
+
 
             if(tmp == n) {
                 break;
