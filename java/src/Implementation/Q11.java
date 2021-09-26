@@ -75,6 +75,7 @@ public class Q11 {
                 }
                 if(arr[nx][ny] == 1) {
                     arr[nx][ny] = 2;
+                    q.offer(new Position(nx,ny));
                 }
             }
             else {
