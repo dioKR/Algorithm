@@ -3,7 +3,7 @@ package DynamicProgramming.BAEKJOON;
 import java.util.Scanner;
 
 
-// 1,2,3 더하기
+// 1,2,3 더하기 문제풀이
 public class BJ9095 {
 
     public static int[] dp = new int[11];
