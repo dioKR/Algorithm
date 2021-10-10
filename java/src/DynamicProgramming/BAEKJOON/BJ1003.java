@@ -3,7 +3,7 @@ package DynamicProgramming.BAEKJOON;
 import java.util.Arrays;
 import java.util.Scanner;
 
-// 피보나치 함수
+// 피보나치 함수 문제풀이
 public class BJ1003 {
 
     public static int[] zero = new int[41];

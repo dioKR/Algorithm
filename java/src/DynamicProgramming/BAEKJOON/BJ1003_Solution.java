@@ -2,6 +2,7 @@ package DynamicProgramming.BAEKJOON;
 
 import java.util.Scanner;
 
+// 피보나치 함수 솔루션
 public class BJ1003_Solution {
 
     static Integer[][] dp = new Integer[41][2];
