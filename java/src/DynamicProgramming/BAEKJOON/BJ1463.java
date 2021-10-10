@@ -2,7 +2,7 @@ package DynamicProgramming.BAEKJOON;
 
 import java.util.Scanner;
 
-// 1로 만들기
+// 1로 만들기 문제풀이
 public class BJ1463 {
 
     public static int[] dp = new int[1000000];
