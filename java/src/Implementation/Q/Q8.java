@@ -1,4 +1,4 @@
-package Implementation;
+package Implementation.Q;
 
 import java.util.PriorityQueue;
 import java.util.Scanner;

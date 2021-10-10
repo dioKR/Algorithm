@@ -1,4 +1,4 @@
-package Implementation;
+package Implementation.Q;
 
 // 자물쇠와 열쇠
 public class Q10 {
