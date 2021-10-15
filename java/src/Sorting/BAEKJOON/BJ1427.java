@@ -17,11 +17,9 @@ public class BJ1427 {
         }
 
         for(int i=0; i<str.length()-1; i++) {
-            int max = num[i];
             int index= i;
             for(int j=i+1; j<str.length(); j++) {
-                if(num[j] > max) {
-                    max = num[j];
+                if(num[j] > num[index]) {
                     index = j;
                 }
             }
