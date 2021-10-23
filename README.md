@@ -2,10 +2,21 @@
 
 알고리즘을 공부하기 위한 저장소입니다.
 
-자바스크립트와 파이썬을 이용합니다.
+[자바](https://github.com/OhYeHwan/Algorithm/tree/main/java/src)와 [자바스크립트](https://github.com/OhYeHwan/Algorithm/tree/main/javascript)를 이용합니다.
 
-# 210504 Todo List
+## 간단 이론 정리
 
-- 프로그래머스 자바스크립트 문제풀기
-  1. 조이스틱
-  2. 큰 수 만들기
+---
+
+### 1. 그리디
+
+```
+
+```
+
+### 2. 구현
+
+```
+
+
+```
