@@ -23,4 +23,9 @@ console.log("result : \n", inputTestCase);
 
 // 1. solution 함수를 작성
 // 2. 입력을 solution에 어떻게 주어야 풀 수 있을지 생각 해볼 것
-function solution(C, testCase) {}
+function solution(C, testCase) {
+  console.log("C : ", C);
+  console.log("testCase : ", testCase);
+}
+
+solution(inputC, inputTestCase);
