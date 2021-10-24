@@ -24,6 +24,7 @@ function compareNumbers(a,b) {
     return a-b;
 }
 
+// sort 함수에 매개변수로 사용
 test.sort(compareNumbers);
 console.log(test); // [1, 4, 21, 30, 10000];
 
