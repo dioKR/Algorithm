@@ -7,7 +7,7 @@
 ```javascript
 // 백준 input 파일은 "/dev/stdin"에 존재
 
-0. 기본 방식
+0. 기본 입력 방식
 const fs = require("fs");
 let input = fs.readFileSync("/dev/stdin").toString();
 input = input.split("\n");
