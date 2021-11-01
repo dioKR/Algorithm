@@ -61,6 +61,11 @@ const [m, ...m_arr] = input.slice(n+1);
 - DFS/BFS
 
   - 대표적인 그래프 탐색 알고리즘
+    - 그래프란
+      ```
+      - 정점과 그 정점을 연결하는 간선으로 이루어진 자료구조
+      - 간선의 방향이 한족이면 Directed Graph, 간선의 방향이 양쪽이면 Undirected Graph
+      ```
   - "탐색"이란 많은 양의 데이터 중에서 원하는 데이터를 찾는 과정
   - DFS, BFS 알고리즘을 구현하기 위해서는 스택과 큐 자료구조를 알고 있어야 한다.
     <br></br>
@@ -177,5 +182,39 @@ const [m, ...m_arr] = input.slice(n+1);
     1. 탐색 시작 노드를 큐에 삽입하고 방문 처리를 한다.
     2. 큐에서 노드를 꺼낸 뒤에 해당 노드의 인접 노드중에서 방문하지 않은 노드를 모두 큐에 삽입하고 방문 처리한다.
     3. 더 이상 2번의 과정을 수행할 수 없을 때까지 반복
+
+```javascript
+function bfs(x, y) {
+  // 1번 과정
+  const queue = []; // 큐 생성
+  queue.push([x, y]); // 시작 노드 삽입
+  visited[x][y] = true; // 방문처리
+
+  ...
+
+  // 2~3번 과정 반복
+  while(queue.length !== 0) {
+    const top = queue.shift();
+    let x = top[0];
+    let y = top[1];
+
+    // 인접 노드 방문
+    for (let i = 0; i < 4; i++) {
+        let nx = x + dx[i];
+        let ny = y + dy[i];
+
+        if (nx < 0 || ny < 0 || nx >= n || ny >= m) continue;
+        if (graph[nx][ny] === 0) continue;
+        if (graph[nx][ny] === 1) {
+
+          ...
+
+          q.push([nx, ny]);
+        }
+      }
+
+  }
+}
+```
 
 ---
