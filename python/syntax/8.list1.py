@@ -35,4 +35,5 @@ min(a)  # 리스트 a의 최소값
 r.shuffle(a)  # 리스트 a를 섞어라
 
 a.sort()  # a 오름차순 정렬
-a.sort(reverse=True)
+a.sort(reverse=True) # 내림차순
+a.clear() # 리스트 값들 제거

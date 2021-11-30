@@ -27,7 +27,13 @@ print()
 
 
 # all , any
-if all(60 > x for x in a):
+if all(60 > x for x in a): # 모두 성립해야 실행
+    print("yes")
+else:
+    print("no")
+
+
+if any(15>x for x in a): # 한번이라도 성립하면 실행
     print("yes")
 else:
     print("no")
