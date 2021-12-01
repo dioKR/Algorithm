@@ -1,5 +1,12 @@
 # python syntax
 
+### 파일 읽어오기
+
+```python
+import sys
+sys.stdin = open("input.txt", "rt")
+```
+
 변수명 정하기
 
 1. 영문과 숫자, \_로 이루어진다.
