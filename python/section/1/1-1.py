@@ -1,3 +1,4 @@
+# K번째 약수
 import sys
 sys.stdin = open("1-1.txt", "rt");
 
@@ -15,4 +16,3 @@ def solution(p,q):
         return -1
 
 print(solution(p,q))
-

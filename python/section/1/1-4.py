@@ -9,6 +9,7 @@ arr = list(map(int, input().split()))
 avg = round(sum(arr)/N)
 dist = [0] * N
 
+# 새로운 배열을 만든게 mistake
 for i in range(N):
     dist[i] = abs(arr[i] - avg)
 
