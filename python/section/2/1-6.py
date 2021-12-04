@@ -2,6 +2,7 @@ import sys
 sys.stdin = open("1-6.txt", "rt")
 
 # 너무 navie한 방식인가?
+# 솔루션 보기!
 n = int(input())
 map = [list(map(int, input().split())) for _ in range(n)]
 _max = -2176000000
