@@ -1,0 +1,30 @@
+import sys
+sys.stdin = open("1-3.txt", "rt")
+
+def Count(capacity):
+    cnt=1
+    sum=0
+    for x in Music:
+        if sum+x > capacity:
+            cnt+=1
+            sum=x
+        else:
+            sum+=x
+    return cnt
+
+n, m = map(int,input().split())
+Music = list(map(int,input().split()))
+maxM = max(Music)
+
+lt = 1
+rt = sum(Music)
+res = 0
+
+while lt <= rt:
+    mid = (lt+rt)//2
+    if mid >= maxM and Count(mid) <= m:
+        res = mid
+        rt = mid - 1
+    else:
+        lt = mid + 1
+print(res)
