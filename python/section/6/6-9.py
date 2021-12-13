@@ -24,5 +24,8 @@ while Q:
             graph[nx][ny] = graph[x][y] + 1
             Q.append((nx,ny))
     
+for i in graph:
+    print(i)
+print()
 
 print(graph[6][6])
