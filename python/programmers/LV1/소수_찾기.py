@@ -1,4 +1,4 @@
-# 에레토스테네스의 체
+# 에라토스테네스의 체
 
 def solution(n):
     answer = []
