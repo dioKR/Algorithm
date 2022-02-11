@@ -1,8 +1,13 @@
-a = 1
-A = 2
-c = 3
+from collections import Counter
 
-print(a, A, c)
+a = [6,6,1,2,3,4,5,5,5]
+b = Counter(a)
+c = b.most_common(1)
 
-a, b, c = 3, 2, 1
-print(a, b, c)
+print(b)
+print(b.most_common(1))
+print(f'value : {c[0][0]},{c[0][1]}')
+print(b.keys())
+
+for x,y in b.items():
+    print(x,y)
