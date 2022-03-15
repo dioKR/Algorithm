@@ -1,6 +1,6 @@
 # 리트코드 704
 # 이진탐색
-
+# 문제풀이
 from typing import List
 
 
