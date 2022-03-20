@@ -16,27 +16,19 @@ if __name__ == "__main__":
     print("NO")
 
 
-
-
 # --------------------
+n = 6
 arr = [1,3,5,6,7,10]
-ch = [0] * 6
-def dfs(L):
-    if L == 6:
-        tot = 0
-        for i in range(6):
-            if ch[i] == 1:
-                tot += arr[i]
-        
-        if tot == sum(arr)//2:
+total = sum(arr)
+
+def dfs(L, sum):
+    if L == n:
+        if sum == (total - sum):
             print("YES")
             sys.exit(0)
-        else:
-            print("NO")
     else:
-        ch[L] = 1
-        dfs(L+1)
-        ch[L] = 0
-        dfs(L+1)
+        dfs(L+1, sum + arr[L])
+        dfs(L+1, sum)
 
-dfs(0)
+dfs(0,0)
+print("NO")
