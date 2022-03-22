@@ -2,12 +2,12 @@ n = 3
 m = 2
 
 ch = [0] * (n+1)
-cnt = 0
+result = 0
 
 def dfs(L):
-    global cnt
+    global result
     if L == m:
-        cnt += 1
+        result += 1
         for i in range(1, n+1):
             if ch[i] == 1:
                 print(i, end=" ")
@@ -20,4 +20,4 @@ def dfs(L):
                 ch[i] = 0
 
 dfs(0)
-print(cnt)
+print(result)
