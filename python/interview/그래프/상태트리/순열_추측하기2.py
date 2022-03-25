@@ -23,5 +23,3 @@ ch = [0] *(n+1)
 
 for i in range(1,n):
     b[i] = b[i-1] * (n-i) // i
-
-DFS(0,0)
