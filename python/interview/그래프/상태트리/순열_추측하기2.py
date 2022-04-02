@@ -2,7 +2,7 @@ import sys
 
 n = 4
 f = 16
-
+# []
 def DFS(L,sum):
     if L == n and sum == f:
         for x in p:
