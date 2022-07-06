@@ -44,13 +44,45 @@ function print(x) {
 // https://unie2.tistory.com/321
 {
   function solution(n) {
-    const arr = new Array(n);
+    const b = new Array(1000);
+    b.fill(0);
+
+    b[1] = 1;
+    b[2] = 3;
+
+    for (let i = 3; i <= n; i++) {
+      b[i] = b[i - 1] + 2 * b[i - 2];
+    }
+
+    return b[n] % 796796;
   }
 
-  print(solution(n));
+  // print(solution(3));
 }
 
 // 효율적인 화폐 구성
 // https://velog.io/@suzieep/Algorithm-%EC%9D%B4%EC%BD%94%ED%85%8C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%ED%99%94%ED%8F%90-%EA%B5%AC%EC%84%B1-%ED%8C%8C%EC%9D%B4%EC%8D%AC
+
 {
+  const arr = [2, 3];
+  const cost = 15;
+
+  function solution(arr, cost) {
+    const d = new Array(cost + 1);
+    d.fill(10001);
+
+    d[0] = 0;
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = arr[i]; j < cost + 1; j++) {
+        if (d[j - arr[i]] !== 10001) {
+          d[j] = Math.min(d[j], d[j - arr[i]] + 1);
+        }
+      }
+    }
+
+    if (d[cost] === 10001) return -1;
+    else return d[cost];
+  }
+
+  print(solution(arr, cost));
 }
