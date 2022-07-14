@@ -43,6 +43,28 @@ function print(x) {
 
 // 정수 삼각형
 // https://www.acmicpc.net/problem/1932
+{
+  const n = 5;
+  const arr = [[7], [3, 8], [8, 1, 0], [2, 7, 4, 4], [4, 5, 2, 6, 5]];
+
+  function solution(n, arr) {
+    const dp = Array.from(Array(n), () => Array(n).fill(0));
+
+    dp[0][0] = arr[0][0];
+
+    for (let i = 1; i < n; i++) {
+      for (let j = 0; j < arr[i].length; j++) {
+        const left = j - 1 < 0 ? 0 : dp[i - 1][j - 1];
+        const right = dp[i - 1][j];
+        dp[i][j] = arr[i][j] + Math.max(left, right);
+      }
+    }
+
+    return Math.max(...dp[n - 1]);
+  }
+
+  print(solution(n, arr));
+}
 
 // 퇴사
 // https://techblog-history-younghunjo1.tistory.com/290
