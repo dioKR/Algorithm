@@ -66,8 +66,31 @@ function print(x) {
   print(solution(n, arr));
 }
 
-// 퇴사
+// 퇴사 ****
 // https://techblog-history-younghunjo1.tistory.com/290
+{
+  const n = 7;
+  const t = [3, 5, 1, 1, 2, 4, 2];
+  const p = [10, 20, 10, 20, 15, 40, 200];
+
+  function solution(n, t, p) {
+    let max = 0;
+    const dp = new Array(n + 1).fill(0);
+
+    for (let i = n - 1; i > -1; i--) {
+      let time = t[i] + i;
+      if (time <= n) {
+        dp[i] = Math.max(p[i] + dp[time], max);
+        max = dp[i];
+      } else {
+        dp[i] = max;
+      }
+    }
+    return max;
+  }
+
+  print(solution(n, t, p));
+}
 
 // 병사 배치하기
 // https://techblog-history-younghunjo1.tistory.com/296
