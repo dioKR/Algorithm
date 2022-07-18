@@ -95,6 +95,26 @@ function print(x) {
 // 병사 배치하기
 // https://techblog-history-younghunjo1.tistory.com/296
 
+{
+  const n = 7;
+  const arr = [15, 11, 4, 8, 5, 2, 4];
+  function solution(n, arr) {
+    const reverse_arr = [...arr].reverse();
+    const dp = new Array(n).fill(1);
+
+    for (let i = 1; i < n; i++) {
+      for (let j = 0; j < i; j++) {
+        if (reverse_arr[j] < reverse_arr[i]) {
+          dp[i] = Math.max(dp[i], dp[j] + 1);
+        }
+      }
+    }
+
+    return n - Math.max(...dp);
+  }
+  print(solution(n, arr));
+}
+
 // 못생긴 수
 // https://techblog-history-younghunjo1.tistory.com/303
 
