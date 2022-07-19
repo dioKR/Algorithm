@@ -37,7 +37,7 @@ function print(x) {
     return Math.max(...answer);
   }
 
-  print(solution(3, 4, [1, 3, 3, 2, 2, 1, 4, 1, 0, 6, 4, 7]));
+  // print(solution(3, 4, [1, 3, 3, 2, 2, 1, 4, 1, 0, 6, 4, 7]));
   //   print(solution(4, 4, [1, 3, 1, 5, 2, 2, 4, 1, 5, 0, 2, 3, 0, 6, 1, 2]));
 }
 
@@ -63,7 +63,7 @@ function print(x) {
     return Math.max(...dp[n - 1]);
   }
 
-  print(solution(n, arr));
+  // print(solution(n, arr));
 }
 
 // 퇴사 ****
@@ -89,7 +89,7 @@ function print(x) {
     return max;
   }
 
-  print(solution(n, t, p));
+  // print(solution(n, t, p));
 }
 
 // 병사 배치하기
@@ -112,11 +112,40 @@ function print(x) {
 
     return n - Math.max(...dp);
   }
-  print(solution(n, arr));
+  // print(solution(n, arr));
 }
 
 // 못생긴 수
 // https://techblog-history-younghunjo1.tistory.com/303
+{
+  const n = 4;
+  function solution(n) {
+    const dp = new Array(n).fill(0);
+    dp[0] = 1;
+
+    let [i2, i3, i5] = [0, 0, 0];
+    let [next2, next3, next5] = [2, 3, 5];
+
+    for (let j = 1; j < n; j++) {
+      dp[j] = Math.min(next2, next3, next5);
+      if (dp[j] === next2) {
+        i2 += 1;
+        next2 = dp[i2] * 2;
+      }
+      if (dp[j] === next3) {
+        i3 += 1;
+        next3 = dp[i3] * 3;
+      }
+      if (dp[j] === next5) {
+        i5 += 1;
+        next5 = dp[i5] * 5;
+      }
+    }
+
+    return dp[n - 1];
+  }
+  print(solution(n));
+}
 
 // 편집거리
 // https://chairking-95.tistory.com/116
