@@ -149,3 +149,6 @@ function print(x) {
 
 // 편집거리
 // https://chairking-95.tistory.com/116
+{
+  function solution() {}
+}
