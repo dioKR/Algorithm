@@ -9,23 +9,47 @@ const coins = input
   .reverse()
   .map((i) => Number(i));
 
-function solution(k, coins) {
-  let result = 0;
-  coins.forEach((coin) => {
-    if (coin < k) {
-      result += parseInt(k / coin);
-      k %= coin;
+// function solution(k, coins) {
+//   let result = 0;
+//   coins.forEach((coin) => {
+//     if (coin <= k) {
+//       result += parseInt(k / coin);
+//       k %= coin;
+//     }
+//   });
+//   return result;
+// }
+
+// 모두 다 돌아야하는 단점이 있음
+// const result = coins.reduce((prev, coin) => {
+//   let sum = prev;
+//   if (coin <= k) {
+//     sum += parseInt(k / coin);
+//     k %= coin;
+//   }
+//   return sum;
+// }, 0);
+// console.log(result);
+
+// 다름사람 풀이
+function another_solution() {
+  let count = 0;
+
+  for (let i = 0; i < coins.length; i++) {
+    if (k < coins[i]) {
+      continue;
+    } else {
+      const value = Math.floor(k / coins[i]);
+      k -= value * coins[i];
+      count += value;
+
+      if (k === 0) {
+        break;
+      }
     }
-  });
-  return result;
+  }
+
+  return count;
 }
 
-const result = coins.reduce((prev, coin) => {
-  let sum = prev;
-  if (coin < k) {
-    sum += parseInt(k / coin);
-    k %= coin;
-  }
-  return sum;
-}, 0);
-console.log(result);
+console.log(another_solution());
